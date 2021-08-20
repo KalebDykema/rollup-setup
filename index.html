@@ -7,9 +7,9 @@
     <title>Rollup</title>
 </head>
 <body>
+    <script src="node_modules/systemjs/dist/s.min.js"></script>
     <script type="module">
-        import main2 from './dist/main2.js'
-        main2()
+        System.import('./dist/main2.js').then(({ default: main }) => main())
     </script>
 </body>
 </html>

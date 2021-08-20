@@ -1,7 +1,18 @@
-import foo from './foo-deb33593.js';
+System.register(['./foo-c9123d17.js'], function (exports) {
+    'use strict';
+    var foo;
+    return {
+        setters: [function (module) {
+            foo = module.default;
+        }],
+        execute: function () {
 
-function main2() {
-    console.log(foo);
-}
+            exports('default', main2);
 
-export { main2 as default };
+            function main2() {
+                console.log(foo);
+            }
+
+        }
+    };
+});
